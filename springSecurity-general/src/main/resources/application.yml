@@ -1,0 +1,36 @@
+server:
+  port: 8000
+  shutdown: graceful
+spring:
+#  main:
+#    allow-circular-references: true
+      
+  jpa:
+    show-sql: true
+  data:
+    redis:
+      repositories:
+        enabled: true 
+        
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+  security:
+    user:
+      name: sa
+      password: 
+
+
+logging:
+  level:
+    '[org.springframework.data.redis.connection]': info
+    '[org.hibernate]': error
+
+
+
+

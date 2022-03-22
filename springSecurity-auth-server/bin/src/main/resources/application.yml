@@ -1,0 +1,19 @@
+server:
+  port: 9000
+  shutdown: graceful
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true     
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/spring_security_testdb
+    username: devuser
+    password: passmenow
+    
+  application:
+    name: spring-security-authorization-server
+
+
+

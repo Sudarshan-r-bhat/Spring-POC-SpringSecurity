@@ -1,0 +1,24 @@
+
+GOAL:
+	. THe goal of this Project is to have a POC on SpringSecurity basicAuthentication, OAUth2, Ldap.
+
+Multiple Authentication for the same resource:
+	. I have tried this on 22 and 23 Dec 2021, but multiple http configuration does not work for httpBasic, OAuth2 combination.
+	. maybe it works for Formlogin and httpBasic combo.
+	
+	Alternatives:
+		. you could use Keycloak, which is configurable to use httpBasic and OAuth2 combination.
+		. you could also use @Profile to choose b/w the http configurations.
+		. possibly you could use OAUth2 cofig. and add a custom filter to do BasicAuthenticationFilters job 'manually'. 
+
+
+
+
+
+
+
+
+
+
+
+

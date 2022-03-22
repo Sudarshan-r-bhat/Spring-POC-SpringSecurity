@@ -1,0 +1,33 @@
+
+server:
+  port: 8090
+logging:
+  level:
+    root: INFO
+    org.springframework.web: INFO
+    org.springframework.security: INFO
+    org.springframework.security.oauth2: INFO
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true     
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/spring_security_testdb
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://auth-server:9000
+
+
+
+
+
+
+
